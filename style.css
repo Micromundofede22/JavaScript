@@ -1,0 +1,214 @@
+body {
+    margin: 0px;
+}
+
+/* navbar */
+nav-container {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    height: 12vh;
+    background-color: rgba(0, 100, 0, 0.718);
+}
+
+.navbar-logo{
+    justify-self: start;
+    margin-left: 20px;
+    color: rgb(0, 0, 0);
+    margin-top: 4vh;
+    cursor: pointer;
+}
+
+.ver-carrito{
+    font-size: 25px;
+    margin-right: 20px;
+    margin-top: 3.5vh;
+    cursor: pointer;
+}
+
+.banner{
+    background-size:100%;
+    background-position: center;
+    height: 25vh;
+    background-image: url(./image/fondoindex.jpg);
+}
+
+.banner-container{
+    text-align: center;
+    padding: 0% 0;
+}
+
+.banner h1 {
+    margin: 0;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 3px black;
+    font-size: 62px;
+    font-weight: bold;
+}
+
+.banner p {
+    font-size: 30px;
+    color: rgb(101, 130, 78);
+    opacity: 0.7;
+    text-shadow: 1px 1px 3px black;
+}
+
+
+
+.shopContenido {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 black;
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card button{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card button:hover{
+    opacity: 0.7;
+}
+
+.img-terrarios {
+    width: 250px;
+    margin-top: 20px;
+}
+
+.precio{
+    color: gray;
+    font-size: 22px;
+}
+
+
+/* Modal */
+
+.modal-container{
+    width: 80%;
+    margin: 0 10%;
+    max-height: 88vh;
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 12vh;
+    scrollbar-color: none;
+}
+
+.modal-container::-webkit-scrollbar{
+    display: none;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: aliceblue;
+    width: 100%;
+}
+
+.modal-header-titulo{
+    justify-self: start;
+
+}
+
+.modal-header-button{
+    cursor:pointer;
+}
+
+.modal-container > .modal-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 10px;
+}
+
+.modal-container > div > img {
+    width: 120px;
+}
+
+.total-content{
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.eliminar-producto{
+    cursor: pointer;
+}
+
+/* cantidad Carrito */
+.cantidad-carrito{
+    background-color: red;
+    color: white;
+    border-radius: 40%;
+    font-size: 12px;
+    padding: 4px;
+    top: 37px;
+    right: 14px;
+    position: absolute;
+    display: none;
+}
+
+.restar{
+    cursor: pointer;
+}
+
+.sumar{
+    cursor: pointer;
+}
+
+/* botón pagar carrito */
+.btn-pagar{
+    background-color: rgba(2, 150, 2, 0.718);
+    border-radius: 30%;
+    height: 35px;
+}
+
+
+/* API SIMPSONS */
+.fondo-simpsons{
+    background-color: hsl(0, 0%, 0%);
+    color: gold;
+}
+
+
+/* --------------------------------FORMAS DE PAGO---------------------------- */
+.header-fondo{
+    background-color: rgba(0, 100, 0, 0.718);
+}
+
+.body-fondo{
+    background-image: url(./image/fondoindex.jpg);
+    background-size: cover;
+}
