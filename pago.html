@@ -8,37 +8,52 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-        <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>Document</title>
 </head>
 
-<header class="header-fondo">
+<header class="header-fondo d-flex justify-content-center mb-3">
     <h2>Forma de pago</h2>
 </header>
+
 <body class="body-fondo p-3">
-    <div>
-        <span><strong>Cantidad de cuotas</strong><br>1 cuota = $500 descuento <br>3 cuotas= 20% recargo </span>
-        <br><select name="Cantidad de cuotas" id="selectCuotas">
 
-            <option value="1">1</option>
-            <option value="3">3</option>
-        </select><br>
-        <span class=""><strong>Envío</strong><br>$500 el envio dentro de la ciudad</span> <br>
-        <select name="envios" id="selectEnvios">
-            <option  value="si">Sí</option>
-            <option value="no">No</option>
-        </select><br>
-        <input type="text"placeholder="Escriba su dirección" id="direccion" value=""><br>
-
-        <button id="calcularTotal" type="submit" class="mt-2">Calcular total</button>
-        <output class="fw-bold" id="total"></output>
-        
+    <div class="card d-flex flex-column overflow-hidden">
+        <h2 class="bg-success">Cantidad de cuotas</h2>
+        <span class="d-flex flex-column"><strong>1cuota =</strong>$500 descuento
+            <strong>3 cuotas=</strong> 20% recargo </span>
+        <div class="d-flex flex-row justify-content-center">
+            <select class="select-cuotas" name="Cantidad de cuotas" id="selectCuotas">
+                <option value="1">1</option>
+                <option value="3">3</option>
+            </select>
+        </div>
 
     </div>
-    <div>
-        <button id="confirma" class="mt-3">Confirma compra</button>
-        <button id="volver">Volver a Productos</button>
-        <button id="api">¿Te gustan los Simpsons?</button>
+
+    <div class="card mt-4 overflow-hidden">
+        <h2 class="bg-success">Envío</h2>
+        <p><strong>$500 dentro de la ciudad</strong> </p>
+        <div>
+            <select class="select-envios" name="envios" id="selectEnvios">
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+
+        <input class="border-success" type="text" placeholder="Escriba su dirección" id="direccion" value=""><br>
+    </div>
+
+    <div class="d-flex flex-row align-items-center justify-content-center">
+        <button id="calcularTotal" type="submit" class="btn-calcular mt-2">Calcular total</button>
+        <output class="fw-bold border-2 ms-3" id="total"></output>
+    </div>
+
+
+    <div class="d-flex flex-column align-items-center justify-content-center">
+        <button id="confirma" class="btn-calcular mt-2">Confirma compra</button>
+        <button id="volver" class="btn-calcular mt-2">Volver a Productos</button>
+        <button id="api" class="btn-calcular text-bg-warning mt-2">¿Te gustan los Simpsons?</button>
     </div>
 
 
@@ -47,7 +62,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-        <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js "></script> 
+    <script src=" https://unpkg.com/sweetalert/dist/sweetalert.min.js "></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 </body>

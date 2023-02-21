@@ -1,13 +1,13 @@
-// ---------------------------DOM-------------------------------
+// --------------------------------DOM-------------------------------
 const shop = document.getElementById("shop");
 const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modalContainer");
 const contadorCarrito= document.getElementById("cantidadCarrito");
 
-
+// --------------------------SECCIÓN PRODUCTOS----------------------
 // Variable carrito.
+verCarrito.disabled= true;
 let carrito = JSON.parse (localStorage.getItem("carrito")) || [];
-
 
 terrarios.forEach((terrario) => {
     const contenido = document.createElement("div");
@@ -41,11 +41,11 @@ terrarios.forEach((terrario) => {
                 precio: terrario.precio,
                 cantidad: terrario.cantidad,
             });
-          
         };
         console.log(carrito);
         contador();
         toastCompra();
+        verCarrito.disabled= false;
         subirLocal();
     });
 });
@@ -57,7 +57,7 @@ const subirLocal= ()=> {
     localStorage.setItem ("carrito", JSON.stringify(carrito));
 }
 
-// -----------------------------------TOASTIFY--------------------------------------
+// ---------------------------------TOASTIFY--------------------------------------
 function toastCompra() {
 
     Toastify({

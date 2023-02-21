@@ -1,7 +1,6 @@
 // Todo el carrito se encuentra englobado dentro de una función general
 
 const funcioncarrito = () => {
-
     modalContainer.innerHTML = "";
     modalContainer.style.display = "flex";
     const modalHeader = document.createElement("div");
@@ -96,20 +95,20 @@ const eliminarProducto = (id) => {
     funcioncarrito();
 }
 
-
-
 // Función contador en carrito
 // La llamo en el boton compra, cuando se pushea el terrario al carrito
 const contador = () => {
     contadorCarrito.style.display = "block";
     const carritoLength = carrito.length;
+    if(carritoLength === 0){
+        verCarrito.disabled= true;
+    }
     localStorage.setItem("carritoLength", JSON.stringify(carritoLength));
     contadorCarrito.innerHTML = JSON.parse(localStorage.getItem("carritoLength"));
 }
 // llamamos la funcion del contador acà, asi se ve desde un comienzo el numerito contador al
 // cargar la pàgina
 contador();
-
 
 // ------------------------------------TOASTIFY-----------------------------------------
 function toastEliminar() {

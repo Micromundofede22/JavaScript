@@ -29,6 +29,8 @@ nav-container {
     margin-right: 20px;
     margin-top: 3.5vh;
     cursor: pointer;
+    background-color: transparent;
+    border: 0px;
 }
 
 .banner{
@@ -196,7 +198,7 @@ nav-container {
 }
 
 
-/* API SIMPSONS */
+/*--------------------------------- API SIMPSONS---------------------------------- */
 .fondo-simpsons{
     background-color: hsl(0, 0%, 0%);
     color: gold;
@@ -211,4 +213,23 @@ nav-container {
 .body-fondo{
     background-image: url(./image/fondoindex.jpg);
     background-size: cover;
+}
+
+.select-cuotas{
+    width: 50px;
+    background-color: rgba(2, 150, 2, 0.718);
+}
+
+.select-envios{
+    width: 50px;
+    background-color:rgba(2, 150, 2, 0.718);
+}
+
+.btn-calcular{
+    background-color: rgba(2, 150, 2, 0.718);
+    color: rgb(0, 0, 0);
+    font-weight:400;
+    border-radius: 20%;
+    border: 0px;
+    box-shadow: 10px 0px 10px 5px black;
 }
