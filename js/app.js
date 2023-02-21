@@ -8,6 +8,12 @@ const contadorCarrito= document.getElementById("cantidadCarrito");
 // Variable carrito.
 verCarrito.disabled= true;
 let carrito = JSON.parse (localStorage.getItem("carrito")) || [];
+if(carrito.length === 0){
+    verCarrito.disabled= true;
+} else{
+    verCarrito.disabled=false;
+    contador();
+}
 
 terrarios.forEach((terrario) => {
     const contenido = document.createElement("div");
