@@ -40,6 +40,7 @@ const funcioncarrito = () => {
         restar.addEventListener("click", () => {
             terrario.cantidad !== 1 && terrario.cantidad--
             subirLocal();
+            contador();
             toastEliminar()
             funcioncarrito();
         });
@@ -48,6 +49,7 @@ const funcioncarrito = () => {
         sumar.addEventListener("click", () => {
             terrario.cantidad++
             subirLocal();
+            contador();
             funcioncarrito();
         });
 
@@ -84,8 +86,8 @@ verCarrito.addEventListener("click", funcioncarrito)
 
 const eliminarProducto = (id) => {
     const eliminarId = carrito.find((el) => el.id === id);
-    carrito = carrito.filter((elemento) => {
-        return elemento !== eliminarId;
+    carrito = carrito.filter((el) => {
+        return el !== eliminarId;
     });
     // funcion del contador, así vuelve a leer el length y actualiza el numero al eliminar
     contador();
@@ -98,7 +100,7 @@ const eliminarProducto = (id) => {
 // Función contador en carrito
 // La llamo en el boton compra, cuando se pushea el terrario al carrito
 const contador = () => {
-    let carritoLength = carrito.length;
+    let carritoLength= carrito.reduce((acc,el)=>acc + el.cantidad, 0);
     if (carritoLength === 0) {
         verCarrito.disabled = true;
     }
