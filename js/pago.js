@@ -69,7 +69,7 @@ function toastEliminar() {
         destination: "",
         newWindow: true,
         close: true,
-        gravity: "bottom",
+        gravity: "top",
         position: "right",
         stopOnFocus: true,
         style: {
