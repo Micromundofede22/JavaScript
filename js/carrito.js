@@ -98,18 +98,14 @@ const eliminarProducto = (id) => {
 // Función contador en carrito
 // La llamo en el boton compra, cuando se pushea el terrario al carrito
 const contador = () => {
-    contadorCarrito.style.display = "block";
-    const carritoLength = carrito.length;
-    if(carritoLength === 0){
-        verCarrito.disabled= true;
+    let carritoLength = carrito.length;
+    if (carritoLength === 0) {
+        verCarrito.disabled = true;
     }
     localStorage.setItem("carritoLength", JSON.stringify(carritoLength));
     contadorCarrito.innerHTML = JSON.parse(localStorage.getItem("carritoLength"));
+    contadorCarrito.style.display = "block";
 }
-// llamamos la funcion del contador acà, asi se ve desde un comienzo el numerito contador al
-// cargar la pàgina
-contador();
-
 // ------------------------------------TOASTIFY-----------------------------------------
 function toastEliminar() {
 

@@ -48,15 +48,12 @@ terrarios.forEach((terrario) => {
                 cantidad: terrario.cantidad,
             });
         };
-        console.log(carrito);
         contador();
         toastCompra();
         verCarrito.disabled= false;
         subirLocal();
     });
 });
-
-
 // ---------------------------------FUNCIÓN LS------------------------------------
 
 const subirLocal= ()=> {

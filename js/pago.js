@@ -6,7 +6,7 @@ const btnVolver = document.getElementById("volver");
 const btnConfirma = document.getElementById("confirma");
 const btnApi=document.getElementById("api");
 const contenedorCarrito = document.getElementById("section");
-const direccionEnvio = document.getElementById("direccion").value;
+const direccionEnvio = document.getElementById("direccion");
 
 // ----------------------------LOCAL STORAGE-------------------------------------
 
@@ -55,9 +55,9 @@ btnApi.addEventListener("click", ()=> window.location="apiSimpsons.html")
 
 
 // -------------------------------LOCAL STORAGE---------------------------------
-const subirLocal = () => {
-    localStorage.setItem("carrito", JSON.stringify(carritoLocal))
-}
+// const subirLocal = () => {
+//     localStorage.setItem("carrito", JSON.stringify(carritoLocal))
+// }
 
 // --------------------------TOASTIFY-----------------------------------
 function toastEliminar() {
